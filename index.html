@@ -1,0 +1,12 @@
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+  var socket = io();
+  socket.emit('action', 'message from client-side website');
+  socket.on('action',function(message){
+    $('#m').html(message);
+  });
+</script>
+
+hi
+<div id='m'></div>
